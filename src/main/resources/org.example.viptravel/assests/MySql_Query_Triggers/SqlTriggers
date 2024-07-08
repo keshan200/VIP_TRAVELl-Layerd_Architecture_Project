@@ -1,0 +1,93 @@
+DELIMITER //
+
+CREATE TRIGGER assign_vehicle_id
+BEFORE INSERT ON bookingdetails
+FOR EACH ROW
+BEGIN
+    SET NEW.vehicleID = (SELECT vehicleID FROM vehicle WHERE regNo = NEW.regNo AND availability = 'Available' LIMIT 1);
+END;
+//
+
+
+
+CREATE TRIGGER update_vehicle_availability
+AFTER INSERT ON bookingdetails
+FOR EACH ROW
+BEGIN
+    UPDATE vehicle
+    SET availability = 'Not Available'
+    WHERE vehicleID = NEW.vehicleID;
+END;
+//
+
+
+
+CREATE TRIGGER add_vehicle_id_before_insert
+BEFORE INSERT ON insurance
+FOR EACH ROW
+BEGIN
+    DECLARE vehicle_id VARCHAR(10);
+    SELECT vehicleID INTO vehicle_id FROM vehicle WHERE regNo = NEW.regNO;
+    SET NEW.vehicleID = vehicle_id;
+END;
+//
+
+
+
+CREATE TRIGGER assign_customer_id_Reservation
+BEFORE INSERT ON reservation
+FOR EACH ROW
+BEGIN
+    SET NEW.customerID = (SELECT customerID FROM customer WHERE NIC = NEW.NIC LIMIT 1);
+END;
+//
+
+
+
+CREATE TRIGGER update_customerID
+BEFORE UPDATE ON reservation
+FOR EACH ROW
+BEGIN
+    DECLARE custID VARCHAR(10);
+    IF NEW.NIC IS NOT NULL THEN
+        SELECT customerID INTO custID FROM customer WHERE NIC = NEW.NIC;
+        SET NEW.customerID = custID;
+    END IF;
+END;
+//
+
+
+
+CREATE TRIGGER populate_customer_id
+BEFORE INSERT ON return_
+FOR EACH ROW
+BEGIN
+    DECLARE v_customer_id VARCHAR(5);
+    SELECT customerID INTO v_customer_id FROM customer WHERE NIC = NEW.NIC;
+    SET NEW.customerID = v_customer_id;
+END;
+//
+
+
+
+CREATE TRIGGER populate_vehicle_id
+BEFORE INSERT ON returndetails
+FOR EACH ROW
+BEGIN
+    DECLARE v_vehicle_id VARCHAR(5);
+    SELECT vehicleID INTO v_vehicle_id FROM vehicle WHERE regNo = NEW.regNo;
+    SET NEW.vehicleID = v_vehicle_id;
+END;
+//
+
+
+
+CREATE TRIGGER delete_insurance_after_vehicle_delete
+AFTER DELETE ON vehicle
+FOR EACH ROW
+BEGIN
+    DELETE FROM insurance WHERE regNO = OLD.regNo;
+END;
+//
+
+DELIMITER ;
