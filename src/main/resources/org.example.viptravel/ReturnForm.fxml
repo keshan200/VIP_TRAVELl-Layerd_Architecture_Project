@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="707.0" prefWidth="1000.0" style="-fx-background-color: #00303d;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.viptravel.controller.ReturnFormController">
+   <children>
+      <AnchorPane layoutX="651.0" layoutY="377.0" prefHeight="70.0" prefWidth="322.0" style="-fx-background-color: black; -fx-background-radius: 30;">
+         <children>
+            <JFXButton layoutX="31.0" layoutY="18.0" onAction="#btnAdd" prefHeight="34.0" prefWidth="112.0" style="-fx-background-color: #efa700; -fx-border-radius: 20; -fx-background-radius: 20;" text="      Confirm">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="28.0" fitWidth="32.0" layoutX="41.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/confirm%20colour.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="17.0" layoutY="26.0" prefHeight="417.0" prefWidth="610.0" style="-fx-background-color: black; -fx-background-radius: 30;" />
+      <AnchorPane layoutX="651.0" layoutY="28.0" prefHeight="334.0" prefWidth="322.0" style="-fx-background-color: black; -fx-background-radius: 30;">
+         <children>
+            <Label layoutX="55.0" layoutY="14.0" prefHeight="28.0" prefWidth="212.0" text="Vehicle Damage Status" textFill="GOLD">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbDamge" layoutX="65.0" layoutY="101.0" prefHeight="34.0" prefWidth="187.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
+            <Label layoutX="65.0" layoutY="79.0" prefHeight="18.0" prefWidth="124.0" text="Vehicle Damage" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="156.0" prefHeight="22.0" prefWidth="198.0" text="Vehicle Damage Description" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtdesc" layoutX="65.0" layoutY="186.0" prefHeight="96.0" prefWidth="187.0" style="-fx-background-radius: 20;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextArea>
+         </children>
+      </AnchorPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="241.0" layoutX="14.0" layoutY="458.0" stroke="GOLD" strokeType="INSIDE" width="970.0" />
+      <TextField fx:id="txtNIC" layoutX="71.0" layoutY="210.0" onAction="#nicOnAction" prefHeight="34.0" prefWidth="198.0" style="-fx-background-radius: 15;">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtRegNO" layoutX="71.0" layoutY="296.0" prefHeight="34.0" prefWidth="198.0" style="-fx-background-radius: 15;">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <DatePicker fx:id="ReturnDate" layoutX="394.0" layoutY="130.0" onAction="#setReturnDate" prefHeight="34.0" prefWidth="198.0" style="-fx-background-radius: 15;" />
+      <JFXComboBox fx:id="cmbStatus" layoutX="71.0" layoutY="385.0" prefHeight="34.0" prefWidth="198.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
+      <TextField fx:id="txtvehicle" editable="false" layoutX="394.0" layoutY="296.0" prefHeight="34.0" prefWidth="198.0" style="-fx-background-radius: 15;" />
+      <TextField fx:id="txtName" editable="false" layoutX="394.0" layoutY="210.0" prefHeight="34.0" prefWidth="198.0" style="-fx-background-radius: 15;">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Label layoutX="71.0" layoutY="185.0" prefHeight="18.0" prefWidth="124.0" text="Customer NIC" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="269.0" prefHeight="22.0" prefWidth="130.0" text="Vehicle Register No" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="357.0" prefHeight="18.0" prefWidth="124.0" text="Stuates" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="106.0" prefHeight="18.0" prefWidth="124.0" text="Return ID " textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="394.0" layoutY="106.0" prefHeight="18.0" prefWidth="124.0" text="Return Date" textFill="#fffbfb">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="394.0" layoutY="185.0" prefHeight="18.0" prefWidth="124.0" text="Customer Name" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="394.0" layoutY="269.0" prefHeight="18.0" prefWidth="124.0" text="Vehicle" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="221.0" layoutY="46.0" prefHeight="35.0" prefWidth="242.0" text="Vehicle Return Form" textFill="GOLD">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblReturn" layoutX="17.0" layoutY="461.0" prefHeight="234.0" prefWidth="962.0">
+        <columns>
+          <TableColumn fx:id="colReturnID" prefWidth="120.79998397827148" text="Return ID" />
+          <TableColumn fx:id="colStatus" prefWidth="122.40000915527344" text="Status" />
+            <TableColumn fx:id="colRetDate" prefWidth="138.4000244140625" text="Return Date" />
+            <TableColumn fx:id="colNIC" prefWidth="131.99993896484375" text="Customer NIC" />
+            <TableColumn fx:id="colRegNo" minWidth="0.0" prefWidth="138.4000244140625" text="Vehicle Register NO" />
+            <TableColumn fx:id="colDamage" prefWidth="98.4000244140625" text="Damages" />
+            <TableColumn fx:id="colDescription" prefWidth="156.79998779296875" text="Damage Description" />
+            <TableColumn fx:id="colac" prefWidth="48.800048828125" text="ac" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="834.0" layoutY="394.0" onAction="#btnPayment" prefHeight="35.0" prefWidth="112.0" style="-fx-background-color: #efa700; -fx-background-radius: 20;" text="       Payment">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="479.0" layoutY="378.0" onAction="#btnConfirm" prefHeight="34.0" prefWidth="112.0" style="-fx-background-color: gold; -fx-background-radius: 20;" text="       Add Cart">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
+      <ImageView fitHeight="26.0" fitWidth="60.0" layoutX="487.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/add%20cart%20colour.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtReturn" layoutX="71.0" layoutY="130.0" prefHeight="35.0" prefWidth="198.0" style="-fx-background-radius: 15;" />
+      <ImageView fitHeight="22.0" fitWidth="26.0" layoutX="849.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/Add%20Payment%20colour.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

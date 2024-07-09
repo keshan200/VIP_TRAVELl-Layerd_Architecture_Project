@@ -13,7 +13,7 @@ public class BOFactory {
     }
 
     public enum BOTypes{
-        Customer,VEHICLE,INSURANCE,PAYMENT,REGISTER,LOGIN,ReservationDETAILS
+        Customer,VEHICLE,INSURANCE,PAYMENT,REGISTER,LOGIN,ReservationDETAILS,ReturnDETAILS,DashBoardMiddle
     }
 
     public  SuperBO getBO(BOTypes bo){
@@ -32,6 +32,10 @@ public class BOFactory {
                 return new LoginBOImpl();
             case ReservationDETAILS:
                 return new ReservationBOImpl();
+            case ReturnDETAILS:
+                return new ReturnBOImpl();
+            case DashBoardMiddle:
+                return new DashboardMiddleBOImpl();
             default:
                 return null;
         }

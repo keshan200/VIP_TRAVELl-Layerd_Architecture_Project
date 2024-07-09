@@ -40,7 +40,7 @@ public class InsuranceDAOImpl implements InsuranceDAO {
 
     @Override
     public boolean update(Insurance entity) throws SQLException, ClassNotFoundException {
-        return false;
+        return SQLUtil.execute("UPDATE insurance SET companyName = ?, type = ?, endDate = ? WHERE insuranceID = ? ",entity.getCompanyName(),entity.getType(),entity.getEndDate(),entity.getInsuranceID());
     }
 
     @Override

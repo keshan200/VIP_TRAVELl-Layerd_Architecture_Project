@@ -259,6 +259,7 @@ public class VehicleFormController {
         String availability = cmbAvailability.getValue();
 
         VehicleDTO vehicleModle = new VehicleDTO(vehicleID,cost,availability);
+        System.out.println("Vehicle"+vehicleModle);
 
         boolean isUpdated =vehicleBO.updateVehicle(vehicleModle);
         if(isUpdated) {

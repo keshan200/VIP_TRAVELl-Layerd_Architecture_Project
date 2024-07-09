@@ -78,7 +78,7 @@ public class RegFormMainController {
 
     @FXML
     void btnBack(ActionEvent event) throws IOException {
-        FXMLLoader Regloader = new FXMLLoader(getClass().getResource("/ViewForms/LoginForm.fxml"));
+        FXMLLoader Regloader = new FXMLLoader(getClass().getResource("/org.example.viptravel/LoginForm.fxml"));
         Parent Regload = Regloader.load();
 
         Stage stage = new Stage();

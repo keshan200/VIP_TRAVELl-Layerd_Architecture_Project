@@ -26,7 +26,7 @@
       </Label>
       <ImageView fitHeight="38.0" fitWidth="41.0" layoutX="417.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Images/userProfile_white.png" />
+            <Image url="@assests/images/userProfile_white.png" />
          </image>
       </ImageView>
       <JFXButton layoutX="1115.0" layoutY="12.0" onAction="#btnLogoutOnAction" prefHeight="38.0" prefWidth="106.0" style="-fx-background-color: #c81d25; -fx-background-radius: 10;" text="      LogOut">
@@ -36,7 +36,7 @@
       </JFXButton>
       <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="1125.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Images/logout.png" />
+            <Image url="@assests/images/logout.png" />
          </image>
       </ImageView>
       <JFXButton layoutX="36.0" layoutY="294.0" onAction="#btnVehicleOnAction" prefHeight="38.0" prefWidth="171.0" style="-fx-background-color: #efa700; -fx-background-radius: 10;" text="     Vehicles">
@@ -46,7 +46,7 @@
       </JFXButton>
       <ImageView fitHeight="25.0" fitWidth="38.0" layoutX="49.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Images/car.png" />
+            <Image url="@assests/images/car.png" />
          </image>
       </ImageView>
       <JFXButton layoutX="35.0" layoutY="362.0" onAction="#btnReservationOnAction" prefHeight="38.0" prefWidth="171.0" style="-fx-background-color: #efa700; -fx-background-radius: 10;" text="        Reservation">
@@ -56,10 +56,13 @@
       </JFXButton>
       <ImageView fitHeight="31.0" fitWidth="25.0" layoutX="46.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Images/bookings.png" />
+            <Image url="@assests/images/bookings.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="21.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/images/logo%20copy.png" />
+         </image></ImageView>
       <Label fx:id="lblDate" layoutX="946.0" layoutY="12.0" prefHeight="38.0" prefWidth="125.0" text="2024 .04.17" textFill="#37ff00">
          <font>
             <Font name="System Bold" size="21.0" />
@@ -92,17 +95,17 @@
       </JFXButton>
       <ImageView fitHeight="31.0" fitWidth="25.0" layoutX="49.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Images/DashboardIcon.png" />
+            <Image url="@assests/images/DashboardIcon.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="31.0" fitWidth="25.0" layoutX="46.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Images/return.png" />
+            <Image url="@assests/images/return.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="38.0" fitWidth="31.0" layoutX="46.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Images/customer.png" />
+            <Image url="@assests/images/customer.png" />
          </image>
       </ImageView>
       <JFXButton layoutX="35.0" layoutY="592.0" onAction="#btnSettingOnAction" prefHeight="38.0" prefWidth="171.0" style="-fx-background-color: #efa700; -fx-background-radius: 10;" text="    Settings">
@@ -112,7 +115,7 @@
       </JFXButton>
       <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="46.0" layoutY="596.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Images/setting%20icone.png" />
+            <Image url="@assests/images/setting%20icone.png" />
          </image>
       </ImageView>
    </children>

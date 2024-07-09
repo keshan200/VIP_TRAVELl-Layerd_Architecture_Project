@@ -14,6 +14,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import org.example.viptravel.bo.BOFactory;
 import org.example.viptravel.bo.custom.CustomerBO;
 import org.example.viptravel.dto.CustomerDTO;
+import org.example.viptravel.entity.Customer;
 import org.example.viptravel.view.tdm.CustomerTM;
 
 
@@ -93,7 +94,7 @@ private void ShowSelectedCustomerDetails(){
            for (CustomerDTO cusModle : cusList){
 
                tblCustomer.getItems().add(new CustomerTM(cusModle.getCustomerID(),cusModle.getNIC(),cusModle.getName(),cusModle.getTelNO(),cusModle.getAddress()));
-
+               System.out.println("List"+cusList);
              //  obList.add(TM);
               // tblCustomer.setItems(obList);
            }
@@ -215,15 +216,15 @@ private  void setcellValues(){
 
     @FXML
     void btnUpdate(ActionEvent event) throws SQLException, ClassNotFoundException {
-
-        String NIC = txtNIC.getText();
         String name = txtName.getText();
         int telNO = Integer.parseInt(txtTelNO.getText());
         String adrs = txtAddrs.getText();
+        String NIC = txtNIC.getText();
 
-        CustomerDTO cusmodle = new CustomerDTO (NIC,name,telNO,adrs);
 
-
+        CustomerDTO cusmodle = new CustomerDTO (name,NIC,telNO,adrs);
+        //System.out.println(cusmodle);
+        System.out.println("cus"+cusmodle);
             boolean isUpdate =cusBO.updateCustomers(cusmodle);
             if (isUpdate) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Customer Updated Sucsesssfully!").show();
@@ -246,9 +247,9 @@ private  void setcellValues(){
    @FXML
    void NicOnAction(ActionEvent event) throws SQLException, ClassNotFoundException {
 
-     /*  String nic = txtNIC.getText();
+       String nic = txtNIC.getText();
 
-       CustomerDTO cusmodel = cusBO.searchCustomer(nic);
+       Customer cusmodel = cusBO.searchCustomer(nic);
 
         if (cusmodel != null) {
             txtCustomerID.setText(cusmodel.getCustomerID());
@@ -260,7 +261,7 @@ private  void setcellValues(){
             new Alert(Alert.AlertType.INFORMATION, "Customer not found!").show();
             clearFields();
 
-        }*/
+        }
     }
 
 

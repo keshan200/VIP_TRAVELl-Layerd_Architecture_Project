@@ -493,7 +493,7 @@ public class BookingFormController {
     }
 
     public void btnPayment(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/ViewForms/SubForms/PaymentForm.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org.example.viptravel/PaymentForm.fxml"));
        Parent load = loader.load();
 
         Stage stage = new Stage();
@@ -503,7 +503,7 @@ public class BookingFormController {
 
     public void btnAddCustomer(ActionEvent event) throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/ViewForms/SubForms/CustomerForm.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org.example.viptravel/CustomerForm.fxml"));
         Parent load = loader.load();
 
         AncReservation.getChildren().clear();

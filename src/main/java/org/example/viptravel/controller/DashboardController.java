@@ -35,11 +35,11 @@ public class DashboardController {
 
     @FXML
     void btnCustomersOnAction(ActionEvent event) throws IOException {
-     /*   FXMLLoader loader = new FXMLLoader(getClass().getResource("/ViewForms/SubForms/CustomerForm.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org.example.viptravel/CustomerForm.fxml"));
         Parent load = loader.load();
 
         AncMain.getChildren().clear();
-        AncMain.getChildren().add(load);*/
+        AncMain.getChildren().add(load);
 
 
     }
@@ -47,7 +47,7 @@ public class DashboardController {
 
     @FXML
     void btnLogoutOnAction(ActionEvent event) throws IOException {
-       /* FXMLLoader logOutloader = new FXMLLoader(getClass().getResource("/ViewForms/LoginForm.fxml"));
+        FXMLLoader logOutloader = new FXMLLoader(getClass().getResource("/org.example.viptravel/LoginForm.fxml"));
         Parent logoutload = logOutloader.load();
 
         Stage logstage = new Stage();
@@ -55,7 +55,7 @@ public class DashboardController {
         logstage.show();
 
         Stage window = (Stage)lblName.getScene().getWindow();
-        window.close();*/
+        window.close();
 
     }
 
@@ -63,12 +63,12 @@ public class DashboardController {
     @FXML
     void btnReservationOnAction(ActionEvent event) throws IOException {
 
-     /*   FXMLLoader VehicleLoader = new FXMLLoader(getClass().getResource("/ViewForms/SubForms/ReservationForm.fxml"));
+       FXMLLoader VehicleLoader = new FXMLLoader(getClass().getResource("/org.example.viptravel/ReservationForm.fxml"));
         Parent vehicleLoad = VehicleLoader.load();
 
 
         AncMain.getChildren().clear();
-        AncMain.getChildren().add(vehicleLoad);*/
+        AncMain.getChildren().add(vehicleLoad);
 
     }
 
@@ -76,12 +76,12 @@ public class DashboardController {
     @FXML
     void btnVehicleOnAction(ActionEvent event) throws IOException {
 
-       /* FXMLLoader VehicleLoader = new FXMLLoader(getClass().getResource("/ViewForms/SubForms/VehicleForm.fxml"));
+        FXMLLoader VehicleLoader = new FXMLLoader(getClass().getResource("/org.example.viptravel/VehicleForm.fxml"));
         Parent vehicleLoad = VehicleLoader.load();
 
 
         AncMain.getChildren().clear();
-        AncMain.getChildren().add(vehicleLoad);*/
+        AncMain.getChildren().add(vehicleLoad);
 
 
     }
@@ -92,28 +92,28 @@ public class DashboardController {
 
     @FXML
     void btnDashboard(ActionEvent event) throws IOException {
-     /*   FXMLLoader loader = new FXMLLoader(getClass().getResource("/ViewForms/SubForms/DashBoardMiddleForm.fxml"));
+       FXMLLoader loader = new FXMLLoader(getClass().getResource("/org.example.viptravel/DashBoardMiddleForm.fxml"));
         Parent load = loader.load();
 
      //   DashboardMiddleFormController controller = loader.getController();
 
         AncMain.getChildren().clear();
-        AncMain.getChildren().add(load);*/
+        AncMain.getChildren().add(load);
 
 
     }
 
 public  void setMIDDLE() {
 
-   /* try {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/ViewForms/SubForms/DashBoardMiddleForm.fxml"));
+   try {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org.example.viptravel/DashBoardMiddleForm.fxml"));
         Parent load =loader.load();
 
         AncMain.getChildren().clear();
         AncMain.getChildren().add(load);
     } catch (IOException e) {
         throw new RuntimeException(e);
-    }*/
+    }
 
 }
 
@@ -131,21 +131,21 @@ public  void setMIDDLE() {
 
     @FXML
     void btnReturn(ActionEvent event) throws IOException {
-     /*   FXMLLoader loader = new FXMLLoader(getClass().getResource("/ViewForms/SubForms/ReturnForm.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org.example.viptravel/ReturnForm.fxml"));
         Parent load = loader.load();
 
         AncMain.getChildren().clear();
-        AncMain.getChildren().add(load);*/
+        AncMain.getChildren().add(load);
 
     }
 
     public void btnSettingOnAction(ActionEvent event) throws IOException {
 
-     /*   FXMLLoader loader = new FXMLLoader(getClass().getResource("/ViewForms/SubForms/EmployeeDdetailForm.fxml"));
+       FXMLLoader loader = new FXMLLoader(getClass().getResource("/org.example.viptravel/EmployeeDdetailForm.fxml"));
         Parent load = loader.load();
 
         AncMain.getChildren().clear();
-        AncMain.getChildren().add(load);*/
+        AncMain.getChildren().add(load);
     }
 }
 

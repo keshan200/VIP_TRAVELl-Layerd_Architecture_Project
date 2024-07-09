@@ -34,7 +34,7 @@ public class VehicleBOImpl implements VehicleBO {
 
     @Override
     public boolean updateVehicle(VehicleDTO dto) throws SQLException, ClassNotFoundException {
-        return vehicledao.update(new Vehicle(dto.getVehicleID(),dto.getAvailability(),dto.getCost()));
+        return vehicledao.update(new Vehicle(dto.getVehicleID(),dto.getCost(),dto.getAvailability()));
     }
 
     @Override

@@ -18,7 +18,7 @@ public class DAOFactory {
     }
 
     public enum DAOTypes{
-        CUSTOMER,VEHICLE,INSURANCE,PAYMENT,REGISTER,LOGIN,RESERVATION,ReservationDETAILS
+        CUSTOMER,VEHICLE,INSURANCE,PAYMENT,REGISTER,LOGIN,RESERVATION,ReservationDETAILS,RETURN,ReturnDETAILS,DashBoardMiddle
     }
 
     public SuperDAO getDAO(DAOTypes dao){
@@ -39,6 +39,12 @@ public class DAOFactory {
                 return  new ReservationDAOImpl();
             case ReservationDETAILS:
                 return new ReservationDetailsDAOImpl();
+            case RETURN:
+                return new ReturnDAOImpl();
+            case ReturnDETAILS:
+                return new ReturnDetailsDAOImpl();
+            case DashBoardMiddle:
+                return new DashBoardMiddleDAOImpl();
             default:
                 return null;
         }

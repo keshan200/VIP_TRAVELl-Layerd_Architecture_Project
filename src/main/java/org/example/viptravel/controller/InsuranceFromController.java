@@ -111,13 +111,18 @@ public class InsuranceFromController {
 
     @FXML
     void btnUpdate(ActionEvent event) throws SQLException, ClassNotFoundException {
-        String insuranceID = txtInsID.getText();
+
         String companyName = txtCompanyName.getText();
         String type = cmbInsType.getValue();
         String date = String.valueOf(dateIns.getValue());
+        String insuranceID = txtInsID.getText();
 
-        InsuranceDTO insuranceModle = new InsuranceDTO(insuranceID,companyName,type,date);
-        boolean isUpdate = insuranceBO.updateInsurance(insuranceModle);
+        InsuranceDTO IN =new InsuranceDTO(insuranceID,companyName,type,date);
+        boolean isUpdate = insuranceBO.updateInsurance(IN);
+
+
+        System.out.println("insu"+IN);
+
 
         if (insuranceID.isEmpty() || companyName.isEmpty() || type == null || date == null) {
             new Alert(Alert.AlertType.ERROR, "Please Fill All the Fields Before Updating!").show();

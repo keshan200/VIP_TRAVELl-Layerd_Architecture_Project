@@ -150,17 +150,17 @@
       </Button>
       <ImageView fitHeight="32.0" fitWidth="28.0" layoutX="796.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Images/print.png" />
+            <Image url="@assests/images/print.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="32.0" fitWidth="28.0" layoutX="796.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Images/Add%20Payment%20colour.png" />
+            <Image url="@assests/images/Add%20Payment%20colour.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="32.0" fitWidth="28.0" layoutX="796.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Images/update%20colour.png" />
+            <Image url="@assests/images/update%20colour.png" />
          </image>
       </ImageView>
    </children>

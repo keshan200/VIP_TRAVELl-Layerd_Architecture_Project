@@ -21,7 +21,7 @@ public class CustomerBOImpl implements CustomerBO{
         ArrayList<Customer>cus = customerDAO.getAll();
 
         for (Customer c : cus){
-            allCUS.add(new CustomerDTO(c.getCustomerID(),c.getName(),c.getNIC(),c.getTelNO(),c.getAddress()));
+            allCUS.add(new CustomerDTO(c.getCustomerID(),c.getNIC(),c.getName(),c.getTelNO(),c.getAddress()));
         }
         return allCUS;
     }
@@ -33,7 +33,7 @@ public class CustomerBOImpl implements CustomerBO{
 
     @Override
     public boolean updateCustomers(CustomerDTO dto) throws SQLException, ClassNotFoundException {
-        return customerDAO.update(new Customer(dto.getNIC(),dto.getName(),dto.getTelNO(), dto.getAddress()));
+        return customerDAO.update(new Customer(dto.getName(),dto.getNIC(),dto.getTelNO(),dto.getAddress()));
     }
 
     @Override

@@ -97,7 +97,9 @@ public class PaymentDAOImpl implements PaymentDAO {
 
         ResultSet resultSet = SQLUtil.execute("SELECT COUNT(*) AS PendingPayment FROM payment WHERE status = 'Pending'");
         if(resultSet.next()){
+         //+   System.out.println(resultSet);
             return  resultSet.getInt("PendingPayment");
+
         }
         return  0;
     }
@@ -105,6 +107,7 @@ public class PaymentDAOImpl implements PaymentDAO {
     public int getCompletePayment(Payment pay) throws SQLException, ClassNotFoundException {
         ResultSet resultSet = SQLUtil.execute("SELECT COUNT(*) AS CompletePayment FROM payment WHERE status = 'Completed' ");
         if(resultSet.next()){
+          // System.out.println(resultSet);
             return  resultSet.getInt("CompletePayment");
         }
         return  0;

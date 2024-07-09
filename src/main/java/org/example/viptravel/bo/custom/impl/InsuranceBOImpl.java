@@ -26,7 +26,7 @@ public class InsuranceBOImpl implements InsuranceBO {
 
     @Override
     public boolean updateInsurance(InsuranceDTO dto) throws SQLException, ClassNotFoundException {
-        return false;
+        return insuranceDAO.update(new Insurance(dto.getInsuranceID(),dto.getCompanyName(),dto.getType(),dto.getEndDate()));
     }
 
     @Override

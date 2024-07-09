@@ -18,13 +18,18 @@ public class CustomerDTO {
     private  String address;
 
 
+    /*public CustomerDTO(String NIC, String name, int telNO, String address) {
+        this.NIC = NIC;
+        this.name = name;
+        this.telNO = telNO;
+        this.address = address;
+    }*/
     public CustomerDTO(String NIC, String name, int telNO, String address) {
         this.NIC = NIC;
         this.name = name;
         this.telNO = telNO;
         this.address = address;
     }
-
     public CustomerDTO(String NIC, String name) {
         this.NIC = NIC;
         this.name = name;

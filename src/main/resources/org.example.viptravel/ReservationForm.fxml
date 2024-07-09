@@ -140,27 +140,27 @@
          </font></JFXButton>
       <ImageView fitHeight="19.0" fitWidth="16.0" layoutX="533.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Images/Add%20NEw.png" />
+            <Image url="@assests/images/Add%20NEw.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="40.0" fitWidth="26.0" layoutX="536.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Images/add%20cart%20colour.png" />
+            <Image url="@assests/images/add%20cart%20colour.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="30.0" fitWidth="26.0" layoutX="781.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Images/print.png" />
+            <Image url="@assests/images/print.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="786.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Images/Add%20Payment%20colour.png" />
+            <Image url="@assests/images/Add%20Payment%20colour.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="782.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Images/add%20booking%20colour.png" />
+            <Image url="@assests/images/add%20booking%20colour.png" />
          </image>
       </ImageView>
       <TextField fx:id="txtDate" layoutX="296.0" layoutY="95.0" prefHeight="34.0" prefWidth="191.0" style="-fx-background-radius: 15;" />
