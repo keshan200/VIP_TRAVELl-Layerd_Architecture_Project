@@ -25,4 +25,12 @@ public class PaymentDTO extends Payment {
     private  double balancedPay;
 
 
+    public PaymentDTO(double fullPayment, String type, String status, String paymentID) {
+
+        this. fullPayment = fullPayment;
+        this.type =type;
+        this.status =status;
+        this.paymentID=paymentID;
+    }
+
 }

@@ -35,7 +35,7 @@ public class PaymentBOImpl implements PaymentBO {
 
     @Override
     public boolean updatePayment(PaymentDTO dto) throws SQLException, ClassNotFoundException {
-        return false;
+        return paymentDAO.update(new Payment(dto.getFullPayment(), dto.getType(),dto.getStatus(),dto.getPaymentID()));
     }
 
     @Override

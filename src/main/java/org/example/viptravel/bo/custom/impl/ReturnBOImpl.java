@@ -41,10 +41,15 @@ public class ReturnBOImpl implements ReturnBO {
         }
         return convert;
     }
-
+/*returnID, status, returnDate, customerNIC, regNo, damages, description*/
     @Override
     public List<ReturnDetailsDTO> getReturnsToCartByNIC(String nic) throws SQLException, ClassNotFoundException {
-        return  null;
+        List<ReturnDetails> al = returnDetailsDAO.getReturnsToCartByNIC(nic);
+        List<ReturnDetailsDTO> conv = new ArrayList<>();
+        for (ReturnDetails r : al){
+            conv.add(new ReturnDetailsDTO(r.getReturnID(),r.getStatus(),r.getReturnDate(),r.getNIC(),r.getRegNo(),r.getDamages(),r.getDesc()));
+        }
+        return conv;
     }
 
     @Override

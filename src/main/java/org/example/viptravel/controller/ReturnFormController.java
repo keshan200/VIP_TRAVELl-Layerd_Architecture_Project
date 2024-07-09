@@ -16,11 +16,13 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import org.example.viptravel.bo.BOFactory;
+import org.example.viptravel.bo.custom.ReservationBO;
 import org.example.viptravel.bo.custom.ReturnBO;
 import org.example.viptravel.dto.CustomerDTO;
 import org.example.viptravel.dto.ReturnDTO;
 import org.example.viptravel.dto.ReturnDetailsDTO;
 import org.example.viptravel.dto.RetutnFormDTO;
+import org.example.viptravel.entity.Customer;
 import org.example.viptravel.entity.Return;
 import org.example.viptravel.entity.ReturnDetails;
 import org.example.viptravel.entity.RetutnForm;
@@ -95,6 +97,7 @@ public class ReturnFormController {
     ObservableList<ReturnTM>retList = FXCollections.observableArrayList();
 
  ReturnBO returnBO = (ReturnBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.ReturnDETAILS);
+    ReservationBO reservationBO = (ReservationBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.ReservationDETAILS);
 
 
 
@@ -128,9 +131,9 @@ public class ReturnFormController {
     @FXML
     void nicOnAction(ActionEvent event) {
 
-      /*  String NIC = txtNIC.getText();
+        String NIC = txtNIC.getText();
         try {
-            CustomerDTO customerNameByNIC = returnBO.getReturnsToCartByNIC(NIC);
+            CustomerDTO customerNameByNIC = reservationBO.getCustomerNameByNIC(NIC);
             if (customerNameByNIC != null) {
                 txtName.setText(customerNameByNIC.getName());
             }
@@ -146,9 +149,9 @@ public class ReturnFormController {
             if (!nic.isEmpty()) {
                 loadReturnsForCustomer(nic);
             }
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
-        }*/
+        }
 
 
     }
@@ -158,6 +161,7 @@ public class ReturnFormController {
     private void loadReturnsForCustomer(String nic) throws SQLException, ClassNotFoundException {
         List<ReturnTM> returnList = new ArrayList<>();
         List<ReturnDetailsDTO> returnDetailsList = returnBO.getReturnsToCartByNIC(nic);
+
         for (ReturnDetailsDTO returnDetails : returnDetailsList) {
             ReturnTM returnTM = new ReturnTM(
                     returnDetails.getReturnID(),
@@ -318,7 +322,7 @@ public class ReturnFormController {
 
     @FXML
     void btnPayment(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/ViewForms/SubForms/PaymentForm.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org.example.viptravel/PaymentForm.fxml"));
         Parent load = loader.load();
 
         Stage stage = new Stage();

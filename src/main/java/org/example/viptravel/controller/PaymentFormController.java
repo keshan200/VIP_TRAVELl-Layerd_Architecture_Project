@@ -343,13 +343,14 @@ public class PaymentFormController {
   @FXML
     public void btnUpdate(ActionEvent event) {
 
-      /*  String paymentId = paymentID.getText();
+       String paymentId = paymentID.getText();
         Double fullpayment = Double.valueOf(txtAmount.getText());
         String type = cmbType.getValue();
         String status = cmbStatus.getValue();
 
         try {
-            boolean isSaved = PaymentRepo.update(paymentId,fullpayment,type,status);
+            PaymentDTO paymentDTO = new PaymentDTO(fullpayment,type,status,paymentId);
+            boolean isSaved = paymentBO.updatePayment(paymentDTO);
             if (isSaved) {
                  new Alert(Alert.AlertType.CONFIRMATION,"Payment updated successfully!").show();
                  loadAllPayments();
@@ -361,8 +362,10 @@ public class PaymentFormController {
             System.err.println("An error occurred while updating payment: " + e.getMessage());
             e.printStackTrace();
             throw new RuntimeException(e);
-        }*/
-}
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+  }
 
 
 

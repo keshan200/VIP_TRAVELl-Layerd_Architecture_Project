@@ -83,14 +83,12 @@ public class InsuranceFromController {
                new Alert(Alert.AlertType.CONFIRMATION,"wade Hari").show();
                clear();
            }
-
        } catch (SQLException e) {
            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
            clear();
        } catch (ClassNotFoundException e) {
            throw new RuntimeException(e);
        }
-
     }
 
     @FXML
@@ -124,7 +122,7 @@ public class InsuranceFromController {
         System.out.println("insu"+IN);
 
 
-        if (insuranceID.isEmpty() || companyName.isEmpty() || type == null || date == null) {
+        if(insuranceID.isEmpty() || companyName.isEmpty() || type == null || date == null) {
             new Alert(Alert.AlertType.ERROR, "Please Fill All the Fields Before Updating!").show();
             return;
         }

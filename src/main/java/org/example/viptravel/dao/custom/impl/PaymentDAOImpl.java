@@ -44,7 +44,7 @@ public class PaymentDAOImpl implements PaymentDAO {
 
     @Override
     public boolean update(Payment entity) throws SQLException, ClassNotFoundException {
-        return false;
+        return SQLUtil.execute("UPDATE payment SET fullpayment = ?, type = ?, status = ? WHERE paymentID = ?",entity.getFullPayment(),entity.getType(),entity.getStatus(),entity.getPaymentID());
     }
 
     @Override

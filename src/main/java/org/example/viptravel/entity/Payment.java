@@ -24,4 +24,11 @@ public class Payment {
     private  double balancedPay;
 
 
+    public Payment(double fullPayment, String type, String status, String paymentID) {
+
+        this. fullPayment = fullPayment;
+        this.type =type;
+        this.status =status;
+        this.paymentID=paymentID;
+    }
 }
