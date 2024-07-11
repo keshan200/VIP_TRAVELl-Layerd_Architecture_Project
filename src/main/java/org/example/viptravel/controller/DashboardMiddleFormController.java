@@ -95,7 +95,7 @@ public class DashboardMiddleFormController {
 
 
     private void loadAllvehicles() {
-     /*   ObservableList<DashboardTableTM> obLst = FXCollections.observableArrayList();
+        ObservableList<DashboardTableTM> obLst = FXCollections.observableArrayList();
 
         try {
             List<DashboardTableTM> vehicleList = dashBoardMiddleBO.getVehicleStatistics();
@@ -106,7 +106,7 @@ public class DashboardMiddleFormController {
             throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
-        }*/
+        }
 
     }
 
@@ -210,7 +210,7 @@ public class DashboardMiddleFormController {
 
 
     private void populatePieChart() {
-       /* try {
+       try {
             List<BookingDetails> sales = dashBoardMiddleBO.getAllSalesByPaymentStatus();
 
             ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
@@ -222,7 +222,7 @@ public class DashboardMiddleFormController {
             ProfitChart.setData(pieChartData);
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
-        }*/
+        }
     }
 
 

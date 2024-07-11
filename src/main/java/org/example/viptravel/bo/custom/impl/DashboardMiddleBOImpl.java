@@ -11,6 +11,7 @@ import org.example.viptravel.entity.DashBoard;
 import org.example.viptravel.view.tdm.DashboardTableTM;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class DashboardMiddleBOImpl implements DashBoardMiddleBO {
@@ -51,11 +52,25 @@ public class DashboardMiddleBOImpl implements DashBoardMiddleBO {
 
     @Override
     public List<DashboardTableTM> getVehicleStatistics() throws SQLException, ClassNotFoundException {
-        return null;
+        List<DashboardTableTM> va =dashBoardMidleDAO.getVehicleStatistics();
+        List<DashboardTableTM> n = new ArrayList<>();
+        for (DashboardTableTM tab :n){
+                va.add(new DashboardTableTM(tab.getVehicleName(),tab.getTotalAvailable(), tab.getCostPerDay()));
+
+        }
+       return va;
+
     }
 
     @Override
     public List<BookingDetails> getAllSalesByPaymentStatus() throws SQLException {
-        return null;
+        List<BookingDetails> payment = dashBoardMidleDAO.getAllSalesByPaymentStatus();
+        List<BookingDetails> entity = new ArrayList<>();
+
+        for (BookingDetails book : entity){
+            payment.add(new BookingDetails(book.getPaymentStatus(),book.getCount()));
+        }
+return payment;
+
     }
 }
